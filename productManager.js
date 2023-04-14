@@ -127,7 +127,7 @@ class ProductManager {
         if (productsArray.some(item => item.id === id)) {
           const productsArray = await this.#readFile(this.archivo);
           /* elimino el producto */
-          console.log(`Eliminando producto con id solicitado...`);
+          console.log(`producto con id solicitado siendo eliminado, espere por favor...`);
           const newProductsArray = productsArray.filter(item => item.id !== id);
           this.#writeFile(this.archivo, newProductsArray);
           console.log(`Producto con el id ${id} eliminado`);
